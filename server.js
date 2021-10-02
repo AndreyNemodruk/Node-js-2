@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
     case "/hello":
       res.statusCode = 200;
       res.setHeader("Content-Type", "text/plain");
-      res.end(`Hello World, ${name && name + ', '}status code=${res.statusCode}`);
+      res.end(`${name ? "Hello,": "Hello World,"} ${name && name + ', '}status code=${res.statusCode}`);
       break;
     case "/goodbye":
       res.statusCode = 200;
